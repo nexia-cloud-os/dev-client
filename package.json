@@ -1,0 +1,35 @@
+{
+  "name": "@amuzcorp/nexia-dev-client",
+  "version": "0.1.0-alpha.0",
+  "description": "Capability-aware discovery client for the experimental Nexia developer platform",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "@amuzcorp/nexia-dev-protocol": "0.1.0-alpha.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amuzcorp/nexia-dev-client.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
