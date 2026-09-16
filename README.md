@@ -25,6 +25,6 @@ try {
 
 ## 로컬 연결과 검증
 
-프로토콜 패키지 의존성은 `@amuzcorp/nexia-dev-protocol`의 `0.1.0-alpha.0`입니다. npm registry 배포 이후에는 `npm install`로 설치합니다. 로컬 패키지로 연결하려면 먼저 `../protocol`에서 `npm test`와 `npm pack`을 실행하고, 여기에서 생성된 tarball을 `npm install --workspaces=false --no-save --package-lock=false /absolute/path/to/protocol.tgz`로 설치합니다. 이어 `npm test`로 통신 계약을 검증하고 `npm pack`으로 CLI용 로컬 배포물을 만듭니다. 이 작업은 npm publish와 다릅니다.
+프로토콜 패키지 의존성은 `@amuzcorp/nexia-dev-protocol`의 `0.1.0-alpha.1`입니다. npm registry 배포 이후에는 `npm install`로 설치합니다. 로컬 패키지로 연결하려면 먼저 `../protocol`에서 `npm test`와 `npm pack`을 실행하고, 여기에서 생성된 tarball을 `npm install --workspaces=false --no-save --package-lock=false /absolute/path/to/protocol.tgz`로 설치합니다. 이어 `npm test`로 통신 계약을 검증하고 `npm pack`으로 CLI용 로컬 배포물을 만듭니다. 이 작업은 npm publish와 다릅니다.
 
 메타데이터의 `UNLICENSED`는 별도 오픈소스 사용권을 부여하지 않음을 뜻합니다. 공개 registry 게시와 사용권 부여는 별개입니다.
