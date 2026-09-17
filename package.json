@@ -1,5 +1,5 @@
 {
-  "name": "@amuzcorp/nexia-dev-client",
+  "name": "@nexia/dev-client",
   "version": "0.1.0-alpha.1",
   "description": "Capability-aware discovery client for the experimental Nexia developer platform",
   "type": "module",
@@ -17,7 +17,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@amuzcorp/nexia-dev-protocol": "0.1.0-alpha.1"
+    "@nexia/dev-protocol": "0.1.0-alpha.1"
   },
   "scripts": {
     "test": "node --test"

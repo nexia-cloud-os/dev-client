@@ -1,4 +1,4 @@
-import { DISCOVERY_PATH, PROTOCOL_VERSION } from '@amuzcorp/nexia-dev-protocol';
+import { DISCOVERY_PATH, PROTOCOL_VERSION } from '@nexia/dev-protocol';
 
 const capabilityKeys = ['manifest_validation', 'project_management', 'remote_development', 'deployments', 'functions'];
 const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);

@@ -1,4 +1,4 @@
-import type { DeveloperDiscovery } from '@amuzcorp/nexia-dev-protocol';
+import type { DeveloperDiscovery } from '@nexia/dev-protocol';
 export interface NexiaClientOptions {
   /** HTTPS origin; no credentials, query, fragment, or API path. */
   endpoint: string;

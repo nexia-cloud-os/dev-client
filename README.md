@@ -3,7 +3,7 @@
 Nexia Core의 개발자 플랫폼 제공 여부와 기능을 조회하는 작은 원격 클라이언트입니다. Node.js 22 이상 ESM이며 별도 빌드가 없습니다. 기존 PHP App SDK나 React host SDK를 대체하지 않으며 Core 내부 코드를 의존하지 않습니다. 초기 버전은 실험적 alpha이며 npm의 `alpha` 태그로 배포합니다.
 
 ```js
-import { createNexiaClient, NexiaClientError } from '@amuzcorp/nexia-dev-client';
+import { createNexiaClient, NexiaClientError } from '@nexia/dev-client';
 
 const client = createNexiaClient({ endpoint: 'https://your-nexia.example' });
 try {
@@ -25,6 +25,6 @@ try {
 
 ## 로컬 연결과 검증
 
-프로토콜 패키지 의존성은 `@amuzcorp/nexia-dev-protocol`의 `0.1.0-alpha.1`입니다. npm registry 배포 이후에는 `npm install`로 설치합니다. 로컬 패키지로 연결하려면 먼저 `../protocol`에서 `npm test`와 `npm pack`을 실행하고, 여기에서 생성된 tarball을 `npm install --workspaces=false --no-save --package-lock=false /absolute/path/to/protocol.tgz`로 설치합니다. 이어 `npm test`로 통신 계약을 검증하고 `npm pack`으로 CLI용 로컬 배포물을 만듭니다. 이 작업은 npm publish와 다릅니다.
+프로토콜 패키지 의존성은 `@nexia/dev-protocol`의 `0.1.0-alpha.1`입니다. npm registry 배포 이후에는 `npm install`로 설치합니다. 로컬 패키지로 연결하려면 먼저 `../protocol`에서 `npm test`와 `npm pack`을 실행하고, 여기에서 생성된 tarball을 `npm install --workspaces=false --no-save --package-lock=false /absolute/path/to/protocol.tgz`로 설치합니다. 이어 `npm test`로 통신 계약을 검증하고 `npm pack`으로 CLI용 로컬 배포물을 만듭니다. 이 작업은 npm publish와 다릅니다.
 
 메타데이터의 `UNLICENSED`는 별도 오픈소스 사용권을 부여하지 않음을 뜻합니다. 공개 registry 게시와 사용권 부여는 별개입니다.
