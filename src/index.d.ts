@@ -3,7 +3,7 @@ export interface NexiaClientOptions {
   /** HTTPS origin; no credentials, query, fragment, or API path. */
   endpoint: string;
   fetch?: typeof globalThis.fetch;
-  /** Permit HTTP only for localhost, 127.0.0.0/8, or ::1. */
+  /** Permit HTTP only for localhost subdomains, 127.0.0.0/8, or ::1. */
   allowInsecureLoopback?: boolean;
 }
 export interface NexiaClient { discover(): Promise<DeveloperDiscovery> }

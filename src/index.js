@@ -27,7 +27,7 @@ export function createNexiaClient({ endpoint, fetch: fetchImplementation = globa
   let origin;
   try { origin = new URL(endpoint); }
   catch (cause) { throw new NexiaClientError('Provide an absolute Nexia HTTPS origin.', { code: 'INVALID_ENDPOINT', cause }); }
-  const loopback = origin.hostname === 'localhost' || origin.hostname === '[::1]' || /^127(?:\.\d{1,3}){3}$/.test(origin.hostname);
+  const loopback = origin.hostname === 'localhost' || origin.hostname.endsWith('.localhost') || origin.hostname === '[::1]' || /^127(?:\.\d{1,3}){3}$/.test(origin.hostname);
   if (origin.username || origin.password || origin.search || origin.hash || origin.pathname !== '/'
     || !(origin.protocol === 'https:' || (origin.protocol === 'http:' && allowInsecureLoopback === true && loopback))) {
     throw new NexiaClientError('Use an HTTPS origin without credentials, path, query, or fragment. Local HTTP requires allowInsecureLoopback: true.', { code: 'INVALID_ENDPOINT' });

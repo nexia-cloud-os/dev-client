@@ -21,7 +21,7 @@ test('rejects unsafe endpoint forms at construction', () => {
   assert.throws(() => createNexiaClient({ endpoint: 'http://localhost.attacker.example', allowInsecureLoopback: true }), { code: 'INVALID_ENDPOINT' });
 });
 test('loopback HTTP requires deliberate opt-in', async () => {
-  for (const endpoint of ['http://localhost:8000', 'http://127.0.0.1:8000', 'http://[::1]:8000']) {
+  for (const endpoint of ['http://localhost:8000', 'http://developers.localhost:8081', 'http://127.0.0.1:8000', 'http://[::1]:8000']) {
     const client = createNexiaClient({ endpoint, allowInsecureLoopback: true, fetch: async () => json(discovery()) });
     assert.deepEqual(await client.discover(), discovery());
   }

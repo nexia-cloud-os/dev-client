@@ -15,7 +15,7 @@ try {
 }
 ```
 
-`endpoint`는 Core 원점 주소입니다. 하위 API 경로, URL 사용자명·비밀번호, query와 fragment를 허용하지 않습니다. 로컬 개발에서는 `createNexiaClient({ endpoint: 'http://localhost:8000', allowInsecureLoopback: true })`로 HTTP를 명시적으로 허용할 수 있습니다. 이는 localhost·127.0.0.0/8·::1에만 적용됩니다.
+`endpoint`는 Core 원점 주소입니다. 하위 API 경로, URL 사용자명·비밀번호, query와 fragment를 허용하지 않습니다. 로컬 개발에서는 `createNexiaClient({ endpoint: 'http://localhost:8000', allowInsecureLoopback: true })`로 HTTP를 명시적으로 허용할 수 있습니다. 이는 localhost와 그 하위 도메인·127.0.0.0/8·::1에만 적용됩니다.
 
 `discover()`는 `/.well-known/nexia-developer-platform`에서 JSON을 읽고 프로토콜 버전 `1`, experimental 상태, 다섯 capability boolean, authentication.methods 문자열 배열을 검사합니다. 기능이 모두 false인 응답도 정상적인 발견 결과이며 실행 기능이 준비되었다는 뜻은 아닙니다. 미래의 추가 응답 필드는 허용하지만 지원하지 않는 프로토콜 버전은 거절합니다.
 
