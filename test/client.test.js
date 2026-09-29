@@ -27,7 +27,7 @@ test('loopback HTTP requires deliberate opt-in', async () => {
   }
 });
 test('rejects incompatible or incomplete discovery documents', async () => {
-  for (const value of [null, {}, { ...discovery(), protocol_version: '2' }, { ...discovery(), capabilities: {} }, { ...discovery(), authentication: { methods: [42] } }]) {
+  for (const value of [null, {}, { ...discovery(), protocol_version: '2' }, { ...discovery(), capabilities: {} }, { ...discovery(), capabilities: { ...discovery().capabilities, repository_submissions: 'yes' } }, { ...discovery(), authentication: { methods: [42] } }]) {
     const client = createNexiaClient({ endpoint: 'https://nexia.example', fetch: async () => json(value) });
     await assert.rejects(client.discover(), { code: 'INVALID_DISCOVERY' });
   }
